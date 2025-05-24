@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Vendas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Registrar Funcionário</h1>
+
+        <form id="formulario">
+            <!-- Caixa de entrada que receberá uma informação do tipo texto (type="text"), salvará a informação enviada na variável nome criada no JS (name="nome"), apresentará uma dica (placeholder) ao usuário e, por fim, tornará o campo obrigatório (required) -->
+            <input type="text" name="nome" placeholder="Nome do Funcionário" required>
+            <input type="number" placeholder="Total de Vendas" step="0.01" required> <!-- O step - nº decimal especificando a quantidade de casas -->
+            <input type="number" placeholder="Meta" step="0.01" required>
+
+            <!-- Envia as informações para o JavaScript -->
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Criando o espaço onde as informações irão aparecer -->
+
+        <div class="resultado" id="resultado"></div>
+
+        <button class="botao-secundario" onclick="">Histórico</button>
+
+        <!-- Criando o espaço onde o histórico irá aparecer -->
+
+        <div class="historico" id="historico"></div>
+    </div>
+    
+    <!-- Inserindo internamente o JS -->
+
+    <script>
+        // CRIANDO TRÊS VARIÁVEIS
+
+        var formulario = document.getElementById('formulario'); //Captura o formulário do HTML
+        var resultadoDiv = document.getElementById('resultado'); //Representa a div onde o resultado será mostrado
+        var historicoDiv = document.getElementById('historico'); //Representa a div onde será exibida o histórico
+
+        // Carrega os dados do armazenamento do navegador, que é o localStorage, e dá a possibilidade de criar uma lista vazia
+        var historico = JSON.parsel(local.Storage.getItem('vendas')) || [];
+
+        formulario.addEventListener('submit', function(event) {
+            
+        })
+    </script>
+
+
+</body>
+</html>
